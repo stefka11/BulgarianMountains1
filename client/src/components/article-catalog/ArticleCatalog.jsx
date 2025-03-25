@@ -1,7 +1,7 @@
 import { useArticles } from "../../api/ArticleApi";
 import ArticleCatalogItem from "./article-catalog-item/ArticleCatalogItem";
 
-export default function GameCatalog() {
+export default function ArticleCatalog() {
     const { articles } = useArticles();
 
     return (

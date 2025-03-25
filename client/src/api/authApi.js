@@ -39,6 +39,7 @@ export const useLogout = () => {
             .then(userLogoutHandler);
 
     }, [accessToken, userLogoutHandler]);
+
     return {
         isLoggedOut: !!accessToken,
     };
