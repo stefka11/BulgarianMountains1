@@ -1580,6 +1580,41 @@
     			_id: "c7f51805-242b-45ed-ae3e-80b68605141b"
     		}
     	},
+        articles: {
+    		"53d4dbf5-7f41-47ba-b485-43eccb91cb95": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			title: 'МУСАЛА ',
+                region: "РИЛА",
+                opis:"Най-високият връх на Балканите",
+                kota: "42.18 сш; 23.58 ид",
+                img: "./images/Musala.jpg",
+                description: 'Work from home accessories',
+    			_createdOn: 1615545143015,
+    			_id: "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
+    		},
+    		"f5929b5c-bca4-4026-8e6e-c09e73908f77": {
+    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+    			title: 'РИЛСКИ МАНАСТИР',
+                region: "РИЛА",
+                opis:"Св.Иван Рилски",
+                kota: "42.13 сш; 23.34 ид",
+                img: "./images/RilaManastir.jpg",
+                description: 'Journals and note-taking',
+    			_createdOn: 1615545572296,
+    			_id: "f5929b5c-bca4-4026-8e6e-c09e73908f77"
+    		},
+    		"c7f51805-242b-45ed-ae3e-80b68605141b": {
+    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+    			title: 'ВИХРЕН',
+                region: "ПИРИН",
+                opis:"Мраморният връх",
+                kota: "41.77 сш; 23.40 ид",
+                img: "./images/Vihren.jpg",
+                description: 'Daily commute essentials',
+    			_createdOn: 1615546332126,
+    			_id: "c7f51805-242b-45ed-ae3e-80b68605141b"
+    		}
+    	},
     	teams: {
     		"34a1cab1-81f1-47e5-aec3-ab6c9810efe1": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",

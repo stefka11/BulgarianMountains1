@@ -5,6 +5,7 @@ import Login from './components/login/Login';
 import Register from './components/register/Register';
 import Logout from './components/logout/Logout';
 import './App.css'
+import Catalog from './components/catalog/Catalog';
 
 function App() {
 
@@ -12,13 +13,15 @@ function App() {
     <>
       <div className="bg-white">
         <Header />
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/logout" element={<Logout />} />
-        </Routes>
+        <main id="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route path="/catalog" element={<Catalog />} />
+          </Routes>
+        </main>
       </div>
     </>
   )
