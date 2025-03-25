@@ -1650,49 +1650,18 @@
     			_updatedOn: 1616237293676
     		}
     	},
-        games: {
-            "cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d": {
-                title: "MK3 Ultimate",
-                category: "Fighting",
-                maxLevel: "10",
-                imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Ultimate_MK3.png/220px-Ultimate_MK3.png",
-                summary: "Ultimate Mortal Kombat 3 was released to arcades in 1995. It is an update of Mortal Kombat 3, featuring altered gameplay, additional characters, and new arenas. Various home versions of the game were released soon afterward, although none of these were completely identical to the arcade version.",
-                _id: "658874ab-6954-433d-8548-6a5790bfea44",
-                _createdOn: 1742399093047,
-                _updatedOn: 1742399720484,
-                _ownerId: "f613227e-905d-4eea-852e-6d91960612a7"
-            },
-            "61a19986-3b86-4347-8ca4-8c074ed87591": {
-                _ownerId: "f613227e-905d-4eea-852e-6d91960612a7",
-                title: "Counter Strike 1.6",
-                category: "FPS",
-                maxLevel: "100",
-                imageUrl: "https://upload.wikimedia.org/wikipedia/en/6/67/Counter-Strike_Box.jpg",
-                summary: "Play the world's number 1 online action game. Engage in an incredibly rea",
-                _createdOn: 1742399795373,
-                _id: "eb85bf57-7877-4469-9ab5-66bbf3b0f3db"
-            },
-            "8a03aa56-7a82-4a6b-9821-91349fbc552f": {
-                _ownerId: "f613227e-905d-4eea-852e-6d91960612a7",
-                title: "Deep Rock Galactic",
-                category: "FPS PVE",
-                maxLevel: "30",
-                imageUrl: "https://image.api.playstation.com/vulcan/ap/rnd/202010/1407/2JSde8PFCF6B4nO2EECrcR1m.png",
-                summary: "I'm wondering if fighting bugs and moving dirt is the best way to make a living. For Rock and Stone.",
-                _createdOn: 1742399887193,
-                _id: "3ab6f649-5703-42fd-bda3-f2e9bcdb4016"
-            },
-            "e797fa57-bf0a-4749-8028-72dba715e5f8": {
-                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                title: "Delta Force 1",
-                category: "Shooter",
-                maxLevel: "30",
-                imageUrl: "https://upload.wikimedia.org/wikipedia/en/a/a5/DF1-game.JPG",
-                summary: "Delta Force 1 is a tactical shooter game where players assume the role of a member of the elite counter-terrorism unit, Delta Force.",
-                _createdOn: 1742399981432,
-                _id: "6d127ec6-906f-4942-951c-416156b6a328"
+        games: [
+            {
+                "_ownerId": "560f6ed0-86c3-4470-90a7-87bc9a80fe98",
+                "title": "MK3 Ultimate",
+                "category": "Fighting",
+                "maxLevel": "10",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Ultimate_MK3.png/220px-Ultimate_MK3.png",
+                "summary": "Ultimate Mortal Kombat 3 was released to arcades in 1995. It is an update of Mortal Kombat 3, featuring altered gameplay, additional characters, and new arenas. Various home versions of the game were released soon afterward, although none of these were completely identical to the arcade version.",
+                "_createdOn": 1742238372475,
+                "_id": "2b420d7c-3c8a-4d67-b608-b256228e60dc"
             }
-        }
+        ]
     };
     var rules$1 = {
     	users: {
