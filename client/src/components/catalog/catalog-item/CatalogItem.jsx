@@ -9,7 +9,7 @@ export default function CatalogItem({
     return (
         <div className="allGames">
             <div className="allGames-info">
-                <img src={img} width="250" height="300"/>
+                <img src={img} width="50px" height="80px"/>
                 <h6>{region}</h6>
                 <h2>{title}</h2>
                 <Link to={`/catalog/${_id}/details`} className="details-button">Details</Link>
