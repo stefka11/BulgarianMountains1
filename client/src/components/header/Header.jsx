@@ -3,14 +3,14 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-    { name: 'Home', path: '/' },
-    { name: 'Catalog', path: '/catalog' },
+    { name: 'Начало', path: '/' },
+    { name: 'Каталог', path: '/catalog' },
     { name: 'About', path: '/about' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contacts', path: '/contacts' },
-    { name: 'Login', path: '/login' },
-    { name: 'Logout', path: '/logout' },
-    { name: 'Register', path: '/register' },
+    { name: 'Вход', path: '/login' },
+    { name: 'Изход', path: '/logout' },
+    { name: 'Регистрация', path: '/register' },
 ]
 
 export default function Header() {
