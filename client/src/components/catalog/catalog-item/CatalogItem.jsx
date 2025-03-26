@@ -4,15 +4,16 @@ export default function CatalogItem({
     _id,
     title,
     region,
+    opis,
     img
 }){
     return (
         <div className="allGames">
             <div className="allGames-info">
-                <img src={img} width="50px" height="80px"/>
                 <h6>{region}</h6>
-                <h2>{title}</h2>
-                <Link to={`/catalog/${_id}/details`} className="details-button">Details</Link>
+                <img src={img} width="300px" height="600px"/>  
+                <h2>{title} - {opis}</h2>
+                <Link to={`/catalog/${_id}/details`} className="details-button">Виж по-вече...</Link>
             </div>
 
         </div>

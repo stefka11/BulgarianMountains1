@@ -15,12 +15,12 @@ export default function Catalog() {
 
                         <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
 
-                        {/* {articles.length > 0
+                        {articles.length > 0
                             ? articles.map(article => <CatalogItem key={article._id} {...article} />)
                             : <h3 className="no-articles">No articles yet</h3>
-                        } */}
+                        }
 
-                        {articles.length > 0
+                        {/* {articles.length > 0
                             ? articles.map((article) => (
                                 <div key={article.title} className="group relative">
                                     <img
@@ -33,7 +33,7 @@ export default function Catalog() {
                                 </div>
                             ))
                             : <h3 className="no-articles">No articles yet</h3>
-                        }
+                        } */}
                         </div>
                     </div>
                 </div>
