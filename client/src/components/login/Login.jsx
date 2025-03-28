@@ -13,7 +13,10 @@ export default function Login({}) {
         console.log(values);
 
         const authData = await login(values.email, values.password); //пращаме ги на сървъра с Хоока
-        
+        console.log(authData.email);
+        //console.log(authData.password);
+        console.log(authData.accessToken);
+
         userLoginHandler(authData);   //при успешно логване подаваме на onLogin-цялата информация за логнатия, и отива в App,js
         navigate('/');  //връщаме се на игрите
     }

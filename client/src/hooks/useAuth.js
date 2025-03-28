@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { UserContext } from "../contexts/UserContext";
+import { UserContext } from "../context/UserContext";
 import request from "../utils/request";
 
 export default function useAuth() {
@@ -19,6 +19,8 @@ export default function useAuth() {
 
     return {
         ...authData,
+        userId: authData._id,
+        isAuthenticated: !!authData.accessToken,
         request: {
             get: requestWrapper.bind(null, 'GET'),
             post: requestWrapper.bind(null, 'POST'),
