@@ -82,6 +82,7 @@ export default function ArticleDetails(){
                     <div className="buttons"  style={{
                         display: 'flex', flexDirection: 'row'}}>
                         <div  style={{ backgroundColor: 'grey', padding: 10}}  border="2px" ><Link to={`/article/${articleId}/edit`} className="button">Edit</Link></div>
+
                         <div  style={{ backgroundColor: 'grey', padding: 10}}  border="2px" >
                         <button 
                             onClick={articleDeleteClickHandler}

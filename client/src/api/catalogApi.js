@@ -37,7 +37,15 @@ export const useCreateArticle = () => {
         create,
     }
 };
+export const useEditArticle = () => {
+    const { request } = useAuth();
 
+    const edit = (articleId, articleData) =>
+        request.put(`${baseUrl}/${articleId}`, { ...articleData, _id: articleId });
+    return {
+        edit,
+    }
+};
 export const useDeleteArticle = () => {
     const { request } = useAuth();
 
