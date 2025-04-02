@@ -26,16 +26,25 @@ export const useArticle = (articleId) => {
     return { article };
 };
 
+
 export const useCreateArticle = () => {
     const { request  } = useAuth();
-    //console.log(request.email);
-    //console.log(request.accessToken);
-
+    //console.log(request);
+    
     const create = (articleData) =>
         request.post(baseUrl, articleData);
-
     return {
         create,
     }
 };
 
+export const useDeleteArticle = () => {
+    const { request } = useAuth();
+
+    const deleteArticle = (articleId) =>
+        request.delete(`${baseUrl}/${articleId}`);
+
+    return {
+        deleteArticle,
+    }
+};

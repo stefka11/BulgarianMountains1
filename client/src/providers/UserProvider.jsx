@@ -1,5 +1,5 @@
 import { UserContext } from "../context/UserContext";
-import useStableState from "../hooks/useStableState,js";
+import useStableState from "../hooks/useStableState";
 
 export default function UserProvider({
     children,

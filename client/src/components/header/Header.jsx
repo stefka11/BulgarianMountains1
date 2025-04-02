@@ -1,66 +1,77 @@
 import { useState } from 'react'
-import { useContext } from 'react'
-import { Link } from 'react-router'
-import { UserContext } from '../../context/UserContext'
-
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
-const navigation = [
-    { name: 'Начало', path: '/' },
-    { name: 'Каталог', path: '/catalog' },
-    { name: 'Нова статия', path: '/article/create' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Вход', path: '/login' },
-    { name: 'Изход', path: '/logout' },
-    { name: 'Регистрация', path: '/register' },
-]
+import { Link } from 'react-router'
+import useAuth from '../../hooks/useAuth'
 
 export default function Header() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-    const { email }  = useContext(UserContext);
+    //const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-    console.log(email);
-    
+    const { email, isAuthenticated } = useAuth();
 
     return (
         <header className="absolute inset-x-0 top-0 z-50">
             <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">
-                    {/* <a href="#" className="-m-1.5 p-1.5">
-                        <span className="sr-only">Your Company</span>
-                        <img
-                            alt=""
-                            src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                            className="h-8 w-auto"
-                        />
-                    </a> */}
+                    <h1><Link to="/">Начало</Link></h1>
                 </div>
+
                 <div className="flex lg:hidden">
-                    <button
+                    {/* <button
                         type="button"
                         onClick={() => setMobileMenuOpen(true)}
                         className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
                     >
                         <span className="sr-only">Open main menu</span>
                         <Bars3Icon aria-hidden="true" className="size-6" />
-                    </button>
+                    </button> */}
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
-                    {navigation.map((item) => (
+                    <div style={{ padding: 20 }}><Link to="/catalog">Каталог</Link></div>
+
+                    {/* <!-- Logged-in users --> */}
+                    {isAuthenticated
+                        ? (
+                            <div id="user" className="text-sm/8 font-semibold text-gray-900"
+                                style={{
+                                    display: 'flex', flexDirection: 'row',
+                                    //backgroundColor: 'blue',
+                                    textAlign: 'center',
+                                    //padding: 40,
+                                }}>
+
+                                <div style={{ padding: 20 }}><Link to="/article/create">Нова статия</Link></div>
+                                <div style={{ padding: 20 }}><Link to="/logout">Изход</Link></div>
+
+                            </div>
+                        )
+                        : (
+                            <div id="guest" className="text-sm/6 font-semibold text-gray-900"
+                                style={{
+                                    display: 'flex', flexDirection: 'row',
+                                }}>
+                                <div style={{ padding: 20 }}><Link to="/login">Вход</Link></div>
+                                <div style={{ padding: 20 }}><Link to="/register">Регистрация</Link></div>
+                            </div>
+                        )
+                    }
+                    {/* {navigation.map((item) => (
                         <a key={item.name} href={item.path} className="text-sm/6 font-semibold text-gray-900">
                             {item.name}
                         </a>
-                    ))}
+                    ))} */}
+
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+                    {email}
                     {/* <a href="#" className="text-sm/6 font-semibold text-gray-900">
                         Log in <span aria-hidden="true">&rarr;</span>
                     </a> */}
                 </div>
             </nav>
 
-            <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+            {/* <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
                 <div className="fixed inset-0 z-50" />
                 <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
@@ -94,11 +105,11 @@ export default function Header() {
                                     </a>
                                 ))}
                             </div>
-                            
+
                         </div>
                     </div>
                 </DialogPanel>
-            </Dialog>
-        </header>
+            </Dialog> */}
+        </header >
     )
 }

@@ -1,14 +1,30 @@
 import { Link, useNavigate, useParams } from "react-router";
-import { useArticle } from "../../api/catalogApi";
+import { useArticle, useDeleteArticle } from "../../api/catalogApi";
 import useAuth from "../../hooks/useAuth";
 
 export default function ArticleDetails(){
+    const navigate = useNavigate();
     const { email, userId } = useAuth()
     const { articleId } = useParams();
     const { article } = useArticle(articleId);
-    console.log(article);
-    console.log(article.img);
+    const { deleteArticle } = useDeleteArticle();
+    //console.log(article);
+    //console.log(article.img);
      
+    const articleDeleteClickHandler = async () => {
+        const hasConfirm = confirm(`Сигурни ли сте, че искате да изтриете статията ${article.title} ?`);
+
+        if (!hasConfirm) {
+            return;
+        }
+
+        await deleteArticle(articleId);
+
+        navigate('/catalog');
+    };
+
+    const isOwner = userId === article._ownerId;
+
     return (
         <div className="relative overflow-hidden bg-white">
           <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
@@ -60,6 +76,24 @@ export default function ArticleDetails(){
                   </a> */}
                 </div>
               </div>
+
+              {/* <!-- Edit/Delete buttons ( Only for creator of this game )  --> */}
+              {isOwner && (
+                    <div className="buttons"  style={{
+                        display: 'flex', flexDirection: 'row'}}>
+                        <div  style={{ backgroundColor: 'grey', padding: 10}}  border="2px" ><Link to={`/article/${articleId}/edit`} className="button">Edit</Link></div>
+                        <div  style={{ backgroundColor: 'grey', padding: 10}}  border="2px" >
+                        <button 
+                            onClick={articleDeleteClickHandler}
+                            className="button"
+                            // style={{ backgroundColor: 'grey', padding: 10 }}
+                            // border="2px" solid black
+                        >
+                            Delete
+                        </button>
+                        </div>
+                    </div>
+                )}
             </div>
           </div>
         </div>

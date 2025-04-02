@@ -11,7 +11,7 @@ export default function ArticleCreate(){
 
   const submitAction = async (formData) => {
       const articleData = Object.fromEntries(formData);
-      console.log(articleData);
+      //console.log(articleData);
       
       await createArticle(articleData);
 
